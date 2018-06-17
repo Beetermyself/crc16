@@ -1,0 +1,41 @@
+1，升级最新的git2.5.0
+
+yum info git
+
+安装依赖包
+
+yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel
+
+yum install  gcc perl-ExtUtils-MakeMaker
+
+
+下载&解压
+
+wget https://www.kernel.org/pub/software/scm/git/git-2.5.0.tar.gz
+
+tar -zxvf git-2.5.0.tar.gz
+
+编译安装
+
+# cd git-2.5.0
+# make prefix=/usr/local/git all
+# make prefix=/usr/local/git install
+# echo "export PATH=$PATH:/usr/local/git/bin" >> /etc/bashrc
+# source /etc/bashrc
+
+检查git版本
+
+# git --version
+git version 2.5.0
+
+
+上传命令
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin git@github.com:Beetermyself/wxswoole.git
+git push -u origin master
+
+修改仓库的地址
+
+git remote set-url origin [url]
